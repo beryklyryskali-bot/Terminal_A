@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОО "TERMINAL-A" — Грузоперевозки МЦПС «Хоргос»</title>
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Шапка сайта -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black text-teal-800 tracking-wider">
+                TERMINAL-<span class="text-amber-500">A</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-teal-600">О нас</a>
+                <a href="#services" class="hover:text-teal-600">Как мы перевозим</a>
+                <a href="#contacts" class="hover:text-teal-600">Контакты</a>
+            </div>
+            <a href="https://wa.me/77000000000" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Написать в WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Грузоперевозки МЦПС «Хоргос» <br>
+            </h1>
+            <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto mb-8">
+                Осуществляем быструю и безопасную перевозку груза с пунктов приема груза до багажного терминала ТОО "TERMINAL-A".
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/77000000000" class="bg-amber-400 hover:bg-amber-500 text-teal-950 px-8 py-3 rounded-xl font-black text-lg shadow-lg transition">
+                    Связаться в WhatsApp
+                </a>
+                <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-teal-900 text-white px-8 py-3 rounded-xl font-bold text-lg transition">
+                    Узнать детали
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">О нас</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">Территория МЦПС "Хоргос"</h3>
+                    <p class="text-sm text-gray-600">Наши пункты приема груза находятся прямо на территории МЦПС «Хоргос» среди торговых домов, где вы совершаете покупки.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-person-walking-luggage"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">Работаем с туристами</h3>
+                    <p class="text-sm text-gray-600">Специализируемся исключительно на приеме и перевозке Ваших покупок и грузов.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">Перевозка через границу</h3>
+                    <p class="text-sm text-gray-600">Быстро и безопасно перевозим ваш груз с пунктов приема грузов через границу Республики Казахстан до багажного отделения ТОО "TERMINAL-A".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как мы работаем -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">Как происходит перевозка</h2>
+            
+            <!-- Шаги перевозки -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 1</div>
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">Передача груза</h3>
+                    <p class="text-gray-600 text-sm">Вы оставляете купленный товар нашим сотрудникам в пунктах приема груза.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 2</div>
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">Перевозка через границу</h3>
+                    <p class="text-gray-600 text-sm">Мы берем на себя всю процедуру перевозки вашего груза через казахстанскую границу.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 3</div>
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">Получение в РК</h3>
+                    <p class="text-gray-600 text-sm">Вы забираете свой груз на территории Республики Казахстан в багажном отделении ТОО "TERMINAL-A".</p>
+                </div>
+            </div>
+
+            <!-- Картинка под шагами -->
+            <div class="max-w-4xl mx-auto">
+                <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200 bg-white">
+                    <img src="C:\Users\147\Desktop\TERMINAL-A сайт\111.jpeg" 
+                         alt="Процесс логистики и грузоперевозок ТОО Terminal-A" 
+                         class="w-full h-64 md:h-96 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-teal-900">Свяжитесь с нами</h2>
+            <p class="text-gray-600 mb-8">Находимся на территории МЦПС «Хоргос». Пишите в WhatsApp для уточнения деталей.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/77000000000" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Написать в WhatsApp
+                </a>
+                <a href="tel:+77000000000" class="bg-teal-800 hover:bg-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
+                    <i class="fa-solid fa-phone text-xl"></i> Позвонить нам
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="text-center py-8 bg-teal-950 text-teal-400 text-sm">
+        <p>&copy; 2026 ТОО "TERMINAL-A". Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
