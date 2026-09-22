@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
     <!-- Шапка сайта -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black text-teal-800 tracking-wider">
+            <a href="#" class="text-2xl font-black text-teal-800 tracking-wider">
                 TERMINAL-<span class="text-amber-500">A</span>
-            </div>
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-                <a href="#about" class="hover:text-teal-600">О нас</a>
-                <a href="#services" class="hover:text-teal-600">Как мы перевозим</a>
-                <a href="#contacts" class="hover:text-teal-600">Контакты</a>
-            </div>
-            <a href="https://wa.me/77000000000" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Написать в WhatsApp
             </a>
+            
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-teal-600 transition">О нас</a>
+                <a href="#services" class="hover:text-teal-600 transition">Как мы перевозим</a>
+                <a href="#contacts" class="hover:text-teal-600 transition">Контакты</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">Написать в WhatsApp</span>
+                </a>
+                
+                <button id="menu-btn" class="md:hidden text-gray-600 hover:text-teal-800 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3 space-y-2 text-sm font-medium text-gray-600">
+            <a href="#about" class="block py-2 hover:text-teal-600">О нас</a>
+            <a href="#services" class="block py-2 hover:text-teal-600">Как мы перевозим</a>
+            <a href="#contacts" class="block py-2 hover:text-teal-600">Контакты</a>
         </div>
     </header>
 
@@ -31,13 +47,13 @@
     <section class="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Грузоперевозки МЦПС «Хоргос» <br>
+                Грузоперевозки МЦПС «Хоргос»
             </h1>
-            <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto mb-8">
+            <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto mb-8 leading-relaxed">
                 Осуществляем быструю и безопасную перевозку груза с пунктов приема груза до багажного терминала ТОО "TERMINAL-A".
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/77000000000" class="bg-amber-400 hover:bg-amber-500 text-teal-950 px-8 py-3 rounded-xl font-black text-lg shadow-lg transition">
+                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-amber-400 hover:bg-amber-500 text-teal-950 px-8 py-3 rounded-xl font-black text-lg shadow-lg transition">
                     Связаться в WhatsApp
                 </a>
                 <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-teal-900 text-white px-8 py-3 rounded-xl font-bold text-lg transition">
@@ -101,24 +117,50 @@
                 </div>
             </div>
 
-            <!-- Видео под шагами -->
-<div class="max-w-2xl mx-auto">
-    <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200 bg-black">
-        <video 
-            class="block w-full h-auto"
-            controls
-            playsinline
-            preload="metadata">
-            
-            <source src="444.mp4" type="video/mp4">
-            
-            Ваш браузер не поддерживает воспроизведение видео.
-        </video>
-    </div>
-</div>
+            <!-- Блок со ссылкой и превью картинки -->
+            <div class="max-w-2xl mx-auto text-center">
+                
+                <!-- Ссылка над картинкой -->
+                <button id="open-video-btn" class="inline-flex items-center gap-2 text-teal-800 hover:text-teal-600 font-bold text-lg mb-4 underline decoration-amber-500 underline-offset-4 transition">
+                    <i class="fa-solid fa-circle-play text-amber-500 text-xl"></i>
+                    Смотреть видеоинструкцию
+                </button>
+
+                <!-- Картинка-превью с кнопкой Play -->
+                <div id="open-video-img" class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg border border-gray-200">
+                    <!-- Замените preview.jpg на путь к вашей картинке -->
+                    <img src="555.PNG" alt="Процесс перевозки груза" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
+                    
+                    <!-- Затемнение и кнопка Play поверх картинки -->
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 flex items-center justify-center transition">
+                        <div class="w-16 h-16 bg-white/90 group-hover:bg-amber-400 text-teal-900 rounded-full flex items-center justify-center shadow-xl transition transform group-hover:scale-110">
+                            <i class="fa-solid fa-play text-2xl ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </section>
+
+    <!-- Всплывающее модальное окно с видео -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl">
+            <!-- Кнопка закрытия -->
+            <button id="close-video-btn" class="absolute top-3 right-3 text-white/80 hover:text-white bg-black/50 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center z-10 transition">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            
+            <!-- Контейнер для видео -->
+            <div class="aspect-video w-full flex items-center justify-center">
+                <video id="modal-video" class="w-full h-full" controls playsinline>
+                    <source src="444.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает воспроизведение видео.
+                </video>
+            </div>
+        </div>
+    </div>
 
     <!-- Контакты -->
     <section id="contacts" class="py-16 bg-white">
@@ -126,7 +168,7 @@
             <h2 class="text-3xl font-bold mb-4 text-teal-900">Свяжитесь с нами</h2>
             <p class="text-gray-600 mb-8">Находимся на территории МЦПС «Хоргос». Пишите в WhatsApp для уточнения деталей.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/77000000000" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
+                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
                     <i class="fa-brands fa-whatsapp text-2xl"></i> Написать в WhatsApp
                 </a>
                 <a href="tel:+77000000000" class="bg-teal-800 hover:bg-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
@@ -141,5 +183,60 @@
         <p>&copy; 2026 ТОО "TERMINAL-A". Все права защищены.</p>
     </footer>
 
+    <!-- Скрипты -->
+    <script>
+        // Переключение мобильного меню
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Управление модальным окном видео
+        const openVideoBtn = document.getElementById('open-video-btn');
+        const openVideoImg = document.getElementById('open-video-img');
+        const closeVideoBtn = document.getElementById('close-video-btn');
+        const videoModal = document.getElementById('video-modal');
+        const modalVideo = document.getElementById('modal-video');
+
+        function openModal() {
+            videoModal.classList.remove('hidden');
+            modalVideo.play();
+        }
+
+        function closeModal() {
+            videoModal.classList.add('hidden');
+            modalVideo.pause();
+            modalVideo.currentTime = 0; // Сброс видео на начало
+        }
+
+        // События открытия
+        openVideoBtn.addEventListener('click', openModal);
+        openVideoImg.addEventListener('click', openModal);
+
+        // События закрытия
+        closeVideoBtn.addEventListener('click', closeModal);
+
+        // Закрытие по клику на фон вне видео
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeModal();
+            }
+        });
+
+        // Закрытие по нажатию клавиши Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
