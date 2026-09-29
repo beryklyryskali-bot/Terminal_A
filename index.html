@@ -1,253 +1,846 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ТОО "TERMINAL-A" — Грузоперевозки МЦПС «Хоргос»</title>
-    <!-- Подключаем Tailwind CSS -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
+
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <!-- Шапка сайта -->
+
+    <!-- =========================
+         ШАПКА САЙТА
+    ========================== -->
+
     <header class="bg-white shadow-sm sticky top-0 z-50">
+
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-black text-teal-800 tracking-wider">
+
+            <!-- Логотип -->
+            <a href="#"
+               class="text-2xl font-black text-teal-800 tracking-wider">
+
                 TERMINAL-<span class="text-amber-500">A</span>
+
             </a>
-            
+
+
+            <!-- Десктопное меню -->
             <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-                <a href="#about" class="hover:text-teal-600 transition">О нас</a>
-                <a href="#services" class="hover:text-teal-600 transition">Как мы перевозим</a>
-                <a href="#rules" class="hover:text-teal-600 transition">Правила перевозки</a>
-                <a href="#contacts" class="hover:text-teal-600 transition">Контакты</a>
+
+                <a href="#about"
+                   class="hover:text-teal-600 transition">
+                    О нас
+                </a>
+
+                <a href="#services"
+                   class="hover:text-teal-600 transition">
+                    Как мы перевозим
+                </a>
+
+                <a href="#rules"
+                   class="hover:text-teal-600 transition">
+                    Правила перевозки
+                </a>
+
+                <a href="#contacts"
+                   class="hover:text-teal-600 transition">
+                    Контакты
+                </a>
+
             </nav>
 
+
+            <!-- WhatsApp + мобильное меню -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition shadow-sm">
+
+                <a href="https://wa.me/77000000000"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition shadow-sm">
+
                     <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span class="hidden sm:inline">Написать в WhatsApp</span>
+
+                    <span class="hidden sm:inline">
+                        Написать в WhatsApp
+                    </span>
+
                 </a>
-                
-                <button id="menu-btn" class="md:hidden text-gray-600 hover:text-teal-800 focus:outline-none p-2">
+
+
+                <!-- Кнопка мобильного меню -->
+                <button id="menu-btn"
+                        class="md:hidden text-gray-600 hover:text-teal-800 focus:outline-none p-2"
+                        aria-label="Открыть меню">
+
                     <i class="fa-solid fa-bars text-xl"></i>
+
                 </button>
+
             </div>
+
         </div>
 
-        <!-- Мобильное меню -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3 space-y-2 text-sm font-medium text-gray-600">
-            <a href="#about" class="block py-2 hover:text-teal-600">О нас</a>
-            <a href="#services" class="block py-2 hover:text-teal-600">Как мы перевозим</a>
-            <a href="#rules" class="block py-2 hover:text-teal-600">Правила перевозки</a>
-            <a href="#contacts" class="block py-2 hover:text-teal-600">Контакты</a>
+
+        <!-- =========================
+             МОБИЛЬНОЕ МЕНЮ
+        ========================== -->
+
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3 space-y-2 text-sm font-medium text-gray-600">
+
+            <a href="#about"
+               class="block py-2 hover:text-teal-600">
+                О нас
+            </a>
+
+            <a href="#services"
+               class="block py-2 hover:text-teal-600">
+                Как мы перевозим
+            </a>
+
+            <a href="#rules"
+               class="block py-2 hover:text-teal-600">
+                Правила перевозки
+            </a>
+
+            <a href="#contacts"
+               class="block py-2 hover:text-teal-600">
+                Контакты
+            </a>
+
         </div>
+
     </header>
 
-    <!-- Главный экран -->
+
+
+    <!-- =========================
+         ГЛАВНЫЙ ЭКРАН
+    ========================== -->
+
     <section class="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20">
+
         <div class="max-w-7xl mx-auto px-4 text-center">
+
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+
                 Грузоперевозки МЦПС «Хоргос»
+
             </h1>
+
+
             <p class="text-lg md:text-xl text-teal-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Осуществляем быструю и безопасную перевозку груза с пунктов приема груза до багажного терминала ТОО "TERMINAL-A".
+
+                Осуществляем быструю и безопасную перевозку груза
+                с пунктов приема груза до багажного терминала
+                ТОО "TERMINAL-A".
+
             </p>
+
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-amber-400 hover:bg-amber-500 text-teal-950 px-8 py-3 rounded-xl font-black text-lg shadow-lg transition">
+
+                <a href="https://wa.me/77000000000"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-amber-400 hover:bg-amber-500 text-teal-950 px-8 py-3 rounded-xl font-black text-lg shadow-lg transition">
+
                     Связаться в WhatsApp
+
                 </a>
-                <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-teal-900 text-white px-8 py-3 rounded-xl font-bold text-lg transition">
+
+
+                <a href="#services"
+                   class="bg-transparent border-2 border-white hover:bg-white hover:text-teal-900 text-white px-8 py-3 rounded-xl font-bold text-lg transition">
+
                     Узнать детали
+
                 </a>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Преимущества -->
-    <section id="about" class="py-16 bg-white">
+
+
+    <!-- =========================
+         О НАС
+    ========================== -->
+
+    <section id="about"
+             class="py-16 bg-white">
+
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">О нас</h2>
+
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">
+
+                О нас
+
+            </h2>
+
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+                <!-- Карточка 1 -->
+
                 <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+
                     <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                     </div>
-                    <h3 class="font-bold text-lg mb-2 text-teal-900">Территория МЦПС "Хоргос"</h3>
-                    <p class="text-sm text-gray-600">Наши пункты приема груза находятся прямо на территории МЦПС «Хоргос» среди торговых домов, где вы совершаете покупки.</p>
+
+
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">
+
+                        Территория МЦПС "Хоргос"
+
+                    </h3>
+
+
+                    <p class="text-sm text-gray-600">
+
+                        Наши пункты приема груза находятся прямо
+                        на территории МЦПС «Хоргос» среди торговых домов,
+                        где вы совершаете покупки.
+
+                    </p>
+
                 </div>
+
+
+
+                <!-- Карточка 2 -->
+
                 <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+
                     <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+
                         <i class="fa-solid fa-person-walking-luggage"></i>
+
                     </div>
-                    <h3 class="font-bold text-lg mb-2 text-teal-900">Работаем с туристами</h3>
-                    <p class="text-sm text-gray-600">Специализируемся исключительно на приеме и перевозке Ваших покупок и грузов.</p>
+
+
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">
+
+                        Работаем с туристами
+
+                    </h3>
+
+
+                    <p class="text-sm text-gray-600">
+
+                        Специализируемся исключительно на приеме
+                        и перевозке Ваших покупок и грузов.
+
+                    </p>
+
                 </div>
+
+
+
+                <!-- Карточка 3 -->
+
                 <div class="p-6 bg-gray-50 rounded-2xl text-center border border-gray-100 hover:shadow-md transition">
+
                     <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl">
+
                         <i class="fa-solid fa-truck-ramp-box"></i>
+
                     </div>
-                    <h3 class="font-bold text-lg mb-2 text-teal-900">Перевозка через границу</h3>
-                    <p class="text-sm text-gray-600">Быстро и безопасно перевозим ваш груз с пунктов приема грузов через границу Республики Казахстан до багажного отделения ТОО "TERMINAL-A".</p>
+
+
+                    <h3 class="font-bold text-lg mb-2 text-teal-900">
+
+                        Перевозка через границу
+
+                    </h3>
+
+
+                    <p class="text-sm text-gray-600">
+
+                        Быстро и безопасно перевозим ваш груз
+                        с пунктов приема грузов через границу
+                        Республики Казахстан до багажного отделения
+                        ТОО "TERMINAL-A".
+
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Как мы работаем -->
-    <section id="services" class="py-16 bg-gray-50">
+
+
+    <!-- =========================
+         КАК ПРОИСХОДИТ ПЕРЕВОЗКА
+    ========================== -->
+
+    <section id="services"
+             class="py-16 bg-gray-50">
+
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">Как происходит перевозка</h2>
-            
-            <!-- Шаги перевозки -->
+
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-900">
+
+                Как происходит перевозка
+
+            </h2>
+
+
+
+            <!-- ШАГИ -->
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 1</div>
-                    <h3 class="text-xl font-bold mb-3 text-teal-900">Передача груза</h3>
-                    <p class="text-gray-600 text-sm">Вы оставляете купленный товар нашим сотрудникам в пунктах приема груза.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 2</div>
-                    <h3 class="text-xl font-bold mb-3 text-teal-900">Перевозка через границу</h3>
-                    <p class="text-gray-600 text-sm">Мы берем на себя всю процедуру перевозки вашего груза через казахстанскую границу.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="text-amber-500 font-black text-xl mb-2">Шаг 3</div>
-                    <h3 class="text-xl font-bold mb-3 text-teal-900">Получение в РК</h3>
-                    <p class="text-gray-600 text-sm">Вы забираете свой груз на территории Республики Казахстан в багажном отделении ТОО "TERMINAL-A".</p>
-                </div>
-            </div>
 
-            <!-- Блок со ссылкой и превью картинки -->
-            <div class="max-w-2xl mx-auto text-center">
-                
-                <!-- Ссылка над картинкой -->
-                <button id="open-video-btn" class="inline-flex items-center gap-2 text-teal-800 hover:text-teal-600 font-bold text-lg mb-4 underline decoration-amber-500 underline-offset-4 transition">
-                    <i class="fa-solid fa-circle-play text-amber-500 text-xl"></i>
-                    Смотреть видеоинструкцию
-                </button>
 
-                <!-- Картинка-превью с кнопкой Play -->
-                <div id="open-video-img" class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg border border-gray-200">
-                    <img src="555.PNG" alt="Процесс перевозки груза" class="w-full h-auto object-cover group-hover:scale-105 transition duration-300">
-                    
-                    <!-- Затемнение и кнопка Play поверх картинки -->
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 flex items-center justify-center transition">
-                        <div class="w-16 h-16 bg-white/90 group-hover:bg-amber-400 text-teal-900 rounded-full flex items-center justify-center shadow-xl transition transform group-hover:scale-110">
-                            <i class="fa-solid fa-play text-2xl ml-1"></i>
-                        </div>
+                <!-- Шаг 1 -->
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+
+                    <div class="text-amber-500 font-black text-xl mb-2">
+
+                        Шаг 1
+
                     </div>
+
+
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">
+
+                        Передача груза
+
+                    </h3>
+
+
+                    <p class="text-gray-600 text-sm">
+
+                        Вы оставляете купленный товар нашим сотрудникам
+                        в пунктах приема груза.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Шаг 2 -->
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+
+                    <div class="text-amber-500 font-black text-xl mb-2">
+
+                        Шаг 2
+
+                    </div>
+
+
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">
+
+                        Перевозка через границу
+
+                    </h3>
+
+
+                    <p class="text-gray-600 text-sm">
+
+                        Мы берем на себя всю процедуру перевозки
+                        вашего груза через казахстанскую границу.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Шаг 3 -->
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+
+                    <div class="text-amber-500 font-black text-xl mb-2">
+
+                        Шаг 3
+
+                    </div>
+
+
+                    <h3 class="text-xl font-bold mb-3 text-teal-900">
+
+                        Получение в РК
+
+                    </h3>
+
+
+                    <p class="text-gray-600 text-sm">
+
+                        Вы забираете свой груз на территории
+                        Республики Казахстан в багажном отделении
+                        ТОО "TERMINAL-A".
+
+                    </p>
+
                 </div>
 
             </div>
 
+
+
+            <!-- =========================
+                 ВИДЕОИНСТРУКЦИИ
+            ========================== -->
+
+            <div class="max-w-3xl mx-auto text-center">
+
+                <h3 class="text-2xl font-bold text-teal-900 mb-6">
+
+                    Видеоинструкция
+
+                </h3>
+
+
+                <!-- Кнопки видео -->
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+
+
+                    <!-- Видео на казахском -->
+
+                    <button id="open-kz-video-btn"
+                            class="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-teal-950 px-6 py-3 rounded-xl font-bold shadow-md transition">
+
+                        <i class="fa-solid fa-circle-play text-xl"></i>
+
+                        Видео на казахском
+
+                    </button>
+
+
+
+                    <!-- Видео на русском -->
+
+                    <button id="open-ru-video-btn"
+                            class="inline-flex items-center justify-center gap-2 bg-teal-800 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-bold shadow-md transition">
+
+                        <i class="fa-solid fa-circle-play text-xl"></i>
+
+                        Видео на русском
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                     ОБЫЧНАЯ КАРТИНКА
+                     БЕЗ КЛИКА
+                ========================== -->
+
+                <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
+
+                    <img src="555.PNG"
+                         alt="Процесс перевозки груза"
+                         class="w-full h-auto object-cover">
+
+                </div>
+
+
+                <p class="text-sm text-gray-500 mt-3">
+
+                    Для просмотра инструкции выберите нужный язык выше.
+
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- Правила перевозки -->
-    <section id="rules" class="py-16 bg-white">
+
+
+    <!-- =========================
+         ПРАВИЛА ПЕРЕВОЗКИ
+    ========================== -->
+
+    <section id="rules"
+             class="py-16 bg-white">
+
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-teal-900">Правила перевозки</h2>
+
+            <h2 class="text-3xl font-bold text-center mb-8 text-teal-900">
+
+                Правила перевозки
+
+            </h2>
+
+
+            <!-- =========================
+                 КАРТИНКА ПРАВИЛ
+            ========================== -->
+
             <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
-                <img src="666.jpeg" alt="Правила перевозки груза" class="w-full h-auto object-cover">
+
+                <img src="666.jpeg"
+                     alt="Правила перевозки груза"
+                     class="w-full h-auto object-cover">
+
             </div>
+
+
+            <!-- =========================
+                 ВИДЕО 555.MP4
+            ========================== -->
+
+            <div class="mt-8 overflow-hidden rounded-2xl shadow-lg border border-gray-200 bg-black">
+
+                <video
+                    class="w-full h-auto"
+                    controls
+                    playsinline
+                    preload="metadata">
+
+                    <source src="555.mp4"
+                            type="video/mp4">
+
+                    Ваш браузер не поддерживает воспроизведение видео.
+
+                </video>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- Всплывающее модальное окно с видео -->
-    <div id="video-modal" class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+
+
+    <!-- =========================
+         МОДАЛЬНОЕ ОКНО ВИДЕО
+    ========================== -->
+
+    <div id="video-modal"
+         class="fixed inset-0 z-50 hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm">
+
+
         <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl">
+
+
             <!-- Кнопка закрытия -->
-            <button id="close-video-btn" class="absolute top-3 right-3 text-white/80 hover:text-white bg-black/50 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center z-10 transition">
+
+            <button id="close-video-btn"
+                    class="absolute top-3 right-3 text-white/80 hover:text-white bg-black/50 hover:bg-black w-10 h-10 rounded-full flex items-center justify-center z-10 transition"
+                    aria-label="Закрыть видео">
+
                 <i class="fa-solid fa-xmark text-2xl"></i>
+
             </button>
-            
-            <!-- Контейнер для видео -->
+
+
+
+            <!-- Видео -->
+
             <div class="aspect-video w-full flex items-center justify-center">
-                <video id="modal-video" class="w-full h-full" controls playsinline>
-                    <source src="444.mp4" type="video/mp4">
+
+                <video id="modal-video"
+                       class="w-full h-full"
+                       controls
+                       playsinline>
+
+                    <source id="modal-video-source"
+                            src=""
+                            type="video/mp4">
+
                     Ваш браузер не поддерживает воспроизведение видео.
+
                 </video>
+
             </div>
+
         </div>
+
     </div>
 
-    <!-- Контакты -->
-    <section id="contacts" class="py-16 bg-gray-50">
+
+
+    <!-- =========================
+         КОНТАКТЫ
+    ========================== -->
+
+    <section id="contacts"
+             class="py-16 bg-gray-50">
+
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-teal-900">Свяжитесь с нами</h2>
-            <p class="text-gray-600 mb-8">Находимся на территории МЦПС «Хоргос». Пишите в WhatsApp для уточнения деталей.</p>
+
+
+            <h2 class="text-3xl font-bold mb-4 text-teal-900">
+
+                Свяжитесь с нами
+
+            </h2>
+
+
+            <p class="text-gray-600 mb-8">
+
+                Находимся на территории МЦПС «Хоргос».
+                Пишите в WhatsApp для уточнения деталей.
+
+            </p>
+
+
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/77000000000" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> Написать в WhatsApp
+
+
+                <!-- WhatsApp -->
+
+                <a href="https://wa.me/77000000000"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
+
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+                    Написать в WhatsApp
+
                 </a>
-                <a href="tel:+77000000000" class="bg-teal-800 hover:bg-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
-                    <i class="fa-solid fa-phone text-xl"></i> Позвонить нам
+
+
+
+                <!-- Телефон -->
+
+                <a href="tel:+77000000000"
+                   class="bg-teal-800 hover:bg-teal-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg transition">
+
+                    <i class="fa-solid fa-phone text-xl"></i>
+
+                    Позвонить нам
+
                 </a>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Подвал -->
+
+
+    <!-- =========================
+         ПОДВАЛ
+    ========================== -->
+
     <footer class="text-center py-8 bg-teal-950 text-teal-400 text-sm">
-        <p>&copy; 2026 ТОО "TERMINAL-A". Все права защищены.</p>
+
+        <p>
+
+            &copy; 2026 ТОО "TERMINAL-A".
+            Все права защищены.
+
+        </p>
+
     </footer>
 
-    <!-- Скрипты -->
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script>
-        // Переключение мобильного меню
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+
+
+        /* =========================
+           МОБИЛЬНОЕ МЕНЮ
+        ========================== */
+
+        const menuBtn =
+            document.getElementById('menu-btn');
+
+        const mobileMenu =
+            document.getElementById('mobile-menu');
+
 
         menuBtn.addEventListener('click', () => {
+
             mobileMenu.classList.toggle('hidden');
+
         });
+
 
         mobileMenu.querySelectorAll('a').forEach(link => {
+
             link.addEventListener('click', () => {
+
                 mobileMenu.classList.add('hidden');
+
             });
+
         });
 
-        // Управление модальным окном видео
-        const openVideoBtn = document.getElementById('open-video-btn');
-        const openVideoImg = document.getElementById('open-video-img');
-        const closeVideoBtn = document.getElementById('close-video-btn');
-        const videoModal = document.getElementById('video-modal');
-        const modalVideo = document.getElementById('modal-video');
 
-        function openModal() {
+
+        /* =========================
+           ЭЛЕМЕНТЫ ВИДЕО
+        ========================== */
+
+        const openKzVideoBtn =
+            document.getElementById('open-kz-video-btn');
+
+        const openRuVideoBtn =
+            document.getElementById('open-ru-video-btn');
+
+        const closeVideoBtn =
+            document.getElementById('close-video-btn');
+
+        const videoModal =
+            document.getElementById('video-modal');
+
+        const modalVideo =
+            document.getElementById('modal-video');
+
+        const modalVideoSource =
+            document.getElementById('modal-video-source');
+
+
+
+        /* =========================
+           ОТКРЫТИЕ ВИДЕОИНСТРУКЦИИ
+        ========================== */
+
+        function openModal(videoFile) {
+
+            // Устанавливаем нужный файл
+            modalVideoSource.src = videoFile;
+
+            // Загружаем новый источник
+            modalVideo.load();
+
+            // Показываем модальное окно
             videoModal.classList.remove('hidden');
-            modalVideo.play();
+
+            // Запускаем видео
+            modalVideo.play().catch(() => {
+
+                // Если браузер запрещает
+                // автоматический запуск,
+                // пользователь сможет нажать Play
+
+            });
+
         }
+
+
+
+        /* =========================
+           ЗАКРЫТИЕ ВИДЕО
+        ========================== */
 
         function closeModal() {
+
+            // Скрываем окно
             videoModal.classList.add('hidden');
+
+            // Останавливаем видео
             modalVideo.pause();
-            modalVideo.currentTime = 0; // Сброс видео на начало
+
+            // Возвращаем видео в начало
+            modalVideo.currentTime = 0;
+
         }
 
-        // События открытия
-        openVideoBtn.addEventListener('click', openModal);
-        openVideoImg.addEventListener('click', openModal);
 
-        // События закрытия
+
+        /* =========================
+           КАЗАХСКОЕ ВИДЕО
+           888.mp4
+        ========================== */
+
+        openKzVideoBtn.addEventListener('click', () => {
+
+            openModal('888.mp4');
+
+        });
+
+
+
+        /* =========================
+           РУССКОЕ ВИДЕО
+           777.mp4
+        ========================== */
+
+        openRuVideoBtn.addEventListener('click', () => {
+
+            openModal('777.mp4');
+
+        });
+
+
+
+        /* =========================
+           ЗАКРЫТИЕ КНОПКОЙ X
+        ========================== */
+
         closeVideoBtn.addEventListener('click', closeModal);
 
-        // Закрытие по клику на фон вне видео
+
+
+        /* =========================
+           ЗАКРЫТИЕ ПО КЛИКУ
+           НА ЗАТЕМНЕННЫЙ ФОН
+        ========================== */
+
         videoModal.addEventListener('click', (e) => {
+
             if (e.target === videoModal) {
+
                 closeModal();
+
             }
+
         });
 
-        // Закрытие по нажатию клавиши Esc
+
+
+        /* =========================
+           ЗАКРЫТИЕ ПО ESC
+        ========================== */
+
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+
+            if (
+                e.key === 'Escape' &&
+                !videoModal.classList.contains('hidden')
+            ) {
+
                 closeModal();
+
             }
+
         });
+
     </script>
+
+
 </body>
+
 </html>
