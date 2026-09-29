@@ -286,6 +286,24 @@
 
             </div>
 
+
+            <!-- =========================
+                 ССЫЛКА НА ВИДЕО "КЕДЕН"
+            ========================== -->
+
+            <div class="mt-10 text-center">
+
+                <button id="open-keden-video-btn"
+                        class="inline-flex items-center gap-2 text-teal-800 hover:text-teal-600 font-bold text-lg underline decoration-amber-500 underline-offset-4 transition">
+
+                    <i class="fa-solid fa-circle-play text-amber-500"></i>
+
+                    Цифровая система "Кеден"
+
+                </button>
+
+            </div>
+
         </div>
 
     </section>
@@ -450,10 +468,7 @@
 
 
 
-                <!-- =========================
-                     ОБЫЧНАЯ КАРТИНКА
-                     БЕЗ КЛИКА
-                ========================== -->
+                <!-- Обычная картинка без клика -->
 
                 <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
 
@@ -494,9 +509,7 @@
             </h2>
 
 
-            <!-- =========================
-                 КАРТИНКА ПРАВИЛ
-            ========================== -->
+            <!-- Картинка правил -->
 
             <div class="overflow-hidden rounded-2xl shadow-lg border border-gray-200">
 
@@ -508,23 +521,19 @@
 
 
             <!-- =========================
-                 ВИДЕО 555.MP4
+                 ССЫЛКА НА ВИДЕО 666.MP4
             ========================== -->
 
-            <div class="mt-8 overflow-hidden rounded-2xl shadow-lg border border-gray-200 bg-black">
+            <div class="text-center mt-8">
 
-                <video
-                    class="w-full h-auto"
-                    controls
-                    playsinline
-                    preload="metadata">
+                <button id="open-vape-video-btn"
+                        class="inline-flex items-center gap-2 text-teal-800 hover:text-teal-600 font-bold text-lg underline decoration-amber-500 underline-offset-4 transition">
 
-                    <source src="555.MP4"
-                            type="video/mp4">
+                    <i class="fa-solid fa-circle-play text-amber-500"></i>
 
-                    Ваш браузер не поддерживает воспроизведение видео.
+                    Запрет на вэйпы и электронные сигареты
 
-                </video>
+                </button>
 
             </div>
 
@@ -567,7 +576,7 @@
                        playsinline>
 
                     <source id="modal-video-source"
-                            src=""
+                            src="666.mp4"
                             type="video/mp4">
 
                     Ваш браузер не поддерживает воспроизведение видео.
@@ -709,6 +718,12 @@
         const openRuVideoBtn =
             document.getElementById('open-ru-video-btn');
 
+        const openKedenVideoBtn =
+            document.getElementById('open-keden-video-btn');
+
+        const openVapeVideoBtn =
+            document.getElementById('open-vape-video-btn');
+
         const closeVideoBtn =
             document.getElementById('close-video-btn');
 
@@ -724,7 +739,7 @@
 
 
         /* =========================
-           ОТКРЫТИЕ ВИДЕОИНСТРУКЦИИ
+           ОТКРЫТИЕ ВИДЕО
         ========================== */
 
         function openModal(videoFile) {
@@ -757,13 +772,10 @@
 
         function closeModal() {
 
-            // Скрываем окно
             videoModal.classList.add('hidden');
 
-            // Останавливаем видео
             modalVideo.pause();
 
-            // Возвращаем видео в начало
             modalVideo.currentTime = 0;
 
         }
@@ -797,6 +809,32 @@
 
 
         /* =========================
+           ЦИФРОВАЯ СИСТЕМА "КЕДЕН"
+           555.mp4
+        ========================== */
+
+        openKedenVideoBtn.addEventListener('click', () => {
+
+            openModal('555.mp4');
+
+        });
+
+
+
+        /* =========================
+           ЗАПРЕТ НА ВЭЙПЫ
+           666.mp4
+        ========================== */
+
+        openVapeVideoBtn.addEventListener('click', () => {
+
+            openModal('666.mp4');
+
+        });
+
+
+
+        /* =========================
            ЗАКРЫТИЕ КНОПКОЙ X
         ========================== */
 
@@ -806,7 +844,7 @@
 
         /* =========================
            ЗАКРЫТИЕ ПО КЛИКУ
-           НА ЗАТЕМНЕННЫЙ ФОН
+           НА ФОН
         ========================== */
 
         videoModal.addEventListener('click', (e) => {
